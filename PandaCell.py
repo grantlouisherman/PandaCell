@@ -2,7 +2,7 @@
 import pandas as pd
 #@author: Grant Herman
 
-#This will combine two csv files into on output file
+#This will combine two csv files into one output file
 def twoCSVCombiner(fileONE,fileTWO,outPath):
     
     fileONE = pd.read_csv(fileONE,sep=',')
