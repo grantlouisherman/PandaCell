@@ -14,21 +14,22 @@ def twoCSVCombiner(fileONE,fileTWO,outPath):
     fileOneDataFrame.to_csv(outPath,sep=',',header=True)
     fileTwoDataFrame.to_csv(outPath,sep=',',header=True)
 
-#This is still a work in progress
+#This will comine as many csv files as needed
 def CSVCombinerInput(fileIn,outPath):
-    fileIn = pd.read_csv(fileIn, sep=',')
-        outPath = open(outPath,'wb')
-        fileDataFrame = pd.DataFrame(fileIn)
-        fileDataFrame.to_csv(outPath,sep=',',header=True)
+    fileIn = pd.read_csv(fileIn, sep=',',dtype=object,header=True)
+    outPath = open(outPath,'wb')
+    fileDataFrame = pd.DataFrame(fileIn)
+    fileDataFrame.to_csv(outPath,sep=',',header=True)
         
-        more = input("Do you want to add another file?(y/n)[Note: Please put "" around your answer")
+    more = input("Do you want to add another file?(y/n)[Note: Please put parenthesis around your answer")
         
-        if(more == "y"):
-            File = input("Name of file input")
-            Path = input("Name of path")
-                return CSVCombinerInput(File,Path)
-        else:
-            return
+    if more == "y":
+        file_ = input("Name of file input")
+        path_ = input("Name of path")
+        return CSVCombinerInput(file_,path_)
+
+    else:
+        return
 
 
     
