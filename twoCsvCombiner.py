@@ -19,10 +19,10 @@ class twoCSVCombiner:
         fileTwo = pd.read_csv(fileTwo,sep=',',dtype=object)
 	#These are the data frames that will write to the specified outpath 
         fileOneDataframe = pd.DataFrame(fileOne)
-		fileTwoDataFrame = pd.DataFrame(fileTwo)
-
+	fileTwoDataFrame = pd.DataFrame(fileTwo)
+	#This is the writing to the outpath via the DataFrames
         fileOneOut = fileOneDataframe.to_csv(outPath,sep=',',header=True)
-		fileTwoOut = fileTwoDataFrame.to_csv(outPath,sep=',',header=True)
+	fileTwoOut = fileTwoDataFrame.to_csv(outPath,sep=',',header=True)
    
 
 
