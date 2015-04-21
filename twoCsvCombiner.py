@@ -5,9 +5,9 @@ import pandas as pd
 class twoCSVCombiner:
 
     def _init_(self,fileOne,fileTwo,outPath):
-		self.fileOne = self.fileOne
-		self.fileTwo = self.fileTwo
-		self.outPath = self.outPath
+	self.fileOne = self.fileOne
+	self.fileTwo = self.fileTwo
+	self.outPath = self.outPath
     
 
     def readerWriter(self,fileOne,fileTwo,outPath):
