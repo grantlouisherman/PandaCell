@@ -1,2 +1,2 @@
 # PandaCell
-this will have the ability to combine CSV, EXCEL, and other Office documents. 
+This will have the ability to combine CSV, EXCEL, and other Office documents. 
